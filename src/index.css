@@ -1,13 +1,172 @@
+:root
+{
+  box-sizing: border-box;
+  --header-bg: hsl(210deg, 50%, 50%);
+  --blue: hsl(210deg, 50%, 35%);
+  --white: rgb(238, 252, 255);
+  --body-bg: hsl(210deg, 50%, 95%);
+  --dark-grey: hsl(0deg, 0%, 20%);
+  --dark-violet: hsl(260deg, 70%, 20%);
+}
+
+*,
+*::before,
+*::after
+{
+  box-sizing: inherit;
+}
+
+a:link
+{
+  color: var(--dark-grey);
+}
+a:visited
+{
+  color: var(--dark-violet);
+}
+a:active
+{
+  color: crimson;
+}
+
+
 body {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
     'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
     sans-serif;
+  background-color: var(--body-bg);
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+.container
+{
+  max-width: 1180px;
+  margin: 0 auto;
 }
+
+.header
+{
+  background-color: var(--header-bg);
+  border-bottom: .15em solid var(--blue);
+}
+
+.header__content
+{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.header__content > div
+{
+  display: flex;
+  align-items: center;
+}
+
+.header__content .logo
+{
+  padding: 2em;
+  border-radius: 50%;
+  background-image: url("./sephiroth.jpg");
+  border: .15em solid var(--blue);
+  background-position-x: -1.8em;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.header__content .toHome
+{
+  margin-left: .5em;
+  text-decoration: none;
+  color: var(--white);
+  font-size: 1.3rem;
+}
+
+.header__content .student
+{
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  color: var(--white);
+  text-align: right;
+  padding: 1em 0em;
+}
+
+.header__content .student p
+{
+  margin: 0;
+  font-size: 1.2rem;
+}
+
+
+/* Article styles */
+.heading
+{
+  text-align: center;
+  font-size: 2.5rem;
+  margin: .5em;
+}
+
+.paragraph
+{
+  text-align: justify;
+  font-size: 1.1rem;
+  line-height: 1.5;
+  margin: 0;
+}
+
+.list
+{
+  display: flex;
+  list-style-type: circle;
+}
+
+.list.vertical
+{
+  flex-direction: column;
+}
+
+.list.centered
+{
+  padding: 0em 27em;
+}
+
+.list > li
+{
+  font-style: oblique;
+}
+
+.list > li + li
+{
+  margin-top: .2rem;
+}
+
+/* Util styles */
+
+.whitespace
+{
+  padding-left: 1.5em;
+}
+
+.more
+{
+  padding: 1em 0em;
+  text-align: right;
+}
+.more > a
+{
+  text-decoration: none;
+  border-bottom: .07em solid var(--dark-violet);
+}
+.more > a:active
+{
+  border-bottom: .07em solid crimson;
+}
+
+.italic
+{
+  font-style: italic;
+}
+

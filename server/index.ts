@@ -9,7 +9,7 @@ app.set("port", process.env.PORT || config.get("PORT"));
 app.use(express.static("build"));
 
 app.get("/*", (req, res) => {
-    res.sendFile(join(__dirname, 'build', 'index.html'));
+    res.sendFile(join(__dirname, "build", "index.html"));
 });
 
 app.listen(app.get("port"), () => console.log(`Server ready at port: ${app.get("port")}.`));
